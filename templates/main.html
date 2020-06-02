@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+  
+
+    <div class="result" align="center">
+        <br>
+        {% if result %}
+            {% for variable, value in original_input.items() %}
+                <b style="font-size: 24px;color: darkslategrey;">{{ variable }} : {{ value }}</b>
+            {% endfor %}
+            <br>
+            <br> <h1 style="color: teal;">Air Quality Index is :
+ </h1>              <p style="font-size:40px;color: teal;">{{ result }}</p>
+        {% endif %}
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div>
+        <table class="table table-hover">
+            <thead>
+              <tr style="background-color:wheat;">
+                <th>Levels of Concern</th>
+                <th>Values of Index</th>
+                <th>Description of Air Quality</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color:green ;">
+                <td>Good</td>
+                <td>0-50</td>
+                <td>Minimal or No Impact
+                </td>
+              </tr>
+              <tr style="background-color:rgb(137, 160, 137) ;">
+                <td>Satisfactory</td>
+                <td>51-100</td>
+                <td>May cause minor breathing difficulties in sensitive people.</td>
+              </tr>
+              <tr style="background-color:yellow">
+                <td>Moderately polluted</td>
+                <td>101-200</td>
+                <td>May cause breathing difficulties in people with lung disease like asthma, and discomfort to people with heart disease, children and older adults.</td>
+              </tr>
+              <tr style="background-color:yellowgreen">
+                <td>Poor</td>
+                <td>201-300</td>
+                <td>May cause breathing difficulties in people on prolonged exposure, and discomfort to people with heart disease</td>
+              </tr>
+              <tr style="background-color:red ;color: white;">
+                <td>Very Poor</td>
+                <td>301-400</td>
+                <td>May cause respiratory illness in people on prolonged exposure. Effect may be more pronounced in people with lung and heart diseases.</td>
+              </tr>
+              <tr style="background-color:darkred;color: white;">
+
+                <td>Severe</td>
+                <td>401-500</td>
+                <td>May cause respiratory issues in healthy people, and serious health issues in people with lung/heart disease. Difficulties may be experienced even during light physical activity.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+</body>
+</html>
