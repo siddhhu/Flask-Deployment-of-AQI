@@ -1,9 +1,12 @@
-from flask import Flask,render_template,request
-import pickle
-import numpy as numpy
-import pandas as pd
-app = Flask(__name__)
-with open('model1.pkl', 'rb') as f:
+from flask import Flask,render_template,request  # flask : web framework for python
+import pickle    #store model
+import numpy as numpy   #mathematical calculations
+import pandas as pd     #read
+
+
+app = Flask(__name__)   #initialise any app
+
+with open('model1.pkl', 'rb') as f:    #reading ppickle file
     model = pickle.load(f)
 
 @app.route('/',methods=["GET","POST"])
@@ -34,6 +37,8 @@ def hello_world():
                                                      'SO2':SO2,},
                                      result=round(prediction,2),
                                      )
+
+
 
     
 
